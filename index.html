@@ -1,29 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Student Information</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Student Information</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0b1a52;
+    --blue: #2340ff;
+    --sky: #dfe7ff;
+    --paper: #f3f6ff;
+    --white: #ffffff;
+    --yellow: #ffd23f;
+    --muted: #55608a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Bricolage Grotesque", "Segoe UI", Arial, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  a:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
+
+  header {
+    background: var(--blue);
+    color: var(--white);
+    padding: 20px 6vw 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  header h1 { margin: 0; font-size: clamp(28px, 5vw, 44px); font-weight: 800; letter-spacing: -0.02em; }
+  header a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid var(--white);
+    padding: 6px 16px;
+    border-radius: 999px;
+  }
+  header a:hover { background: var(--white); color: var(--blue); }
+
+  main {
+    width: min(1000px, 90%);
+    margin: -60px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    align-items: flex-start;
+  }
+
+  #student-card {
+    flex: 0 0 300px;
+    max-width: 100%;
+    position: relative;
+    background: var(--white);
+    border-radius: 18px;
+    padding: 46px 22px 24px;
+    text-align: center;
+    box-shadow: 0 14px 0 var(--ink);
+    border: 3px solid var(--ink);
+  }
+  #student-card::before {
+    content: "";
+    position: absolute;
+    top: 14px; left: 50%;
+    width: 56px; height: 12px;
+    transform: translateX(-50%);
+    background: var(--paper);
+    border: 3px solid var(--ink);
+    border-radius: 999px;
+  }
+  #student-card img {
+    width: 100%;
+    aspect-ratio: 5 / 6;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid var(--blue);
+    background: var(--sky);
+  }
+  #student-card h2 {
+    margin: 18px 0 14px;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+  .id-tag {
+    margin: 0;
+    background: var(--yellow);
+    border: 3px solid var(--ink);
+    border-radius: 10px;
+    padding: 8px;
+    font-size: 15px;
+  }
+
+  .info {
+    flex: 1 1 340px;
+    background: var(--white);
+    border: 3px solid var(--ink);
+    border-radius: 18px;
+    padding: 28px 32px;
+  }
+  .info h2 { margin: 0 0 8px; font-size: 28px; font-weight: 800; }
+  dl { margin: 0; }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 12px;
+    padding: 14px 0;
+    border-bottom: 2px dashed var(--sky);
+  }
+  .row:last-child { border-bottom: 0; }
+  dt { flex: 0 0 170px; color: var(--muted); font-weight: 400; }
+  dd { flex: 1 1 200px; margin: 0; font-weight: 600; font-size: 18px; overflow-wrap: anywhere; }
+
+  .navigation {
+    width: min(1000px, 90%);
+    margin: 56px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .nav-button {
+    text-decoration: none;
+    color: var(--ink);
+    background: var(--sky);
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 999px;
+    border: 2px solid transparent;
+  }
+  .nav-button:hover { border-color: var(--ink); background: var(--white); }
+
+  footer {
+    margin-top: 56px;
+    padding: 22px 6vw;
+    background: var(--ink);
+    color: var(--sky);
+    text-align: center;
+    font-size: 14px;
+  }
+  footer p { margin: 0; }
+</style>
 </head>
 <body>
-  <center><h1 style="font-family: Times New Roman; font-size: 80px; color: Yellow; background-color: Blue;">Student Information</h1></center>
 
-  <div style="float:left; width:230px; text-align:center; border:1px solid black;margin-right: 50px">
-    <img src="https://i.imgur.com/7yOQqfc.jpg" width="230" height="270">
-    <h2>CAMERRON<br>JAE-SUN M.<br>DELA CRUZ</h2>
-    <p>Student ID: DEL3231-24</p>
-</div>
-<h2>General Information</h2>
-<p>Date of Birth: : <b>09/24/12</b></p>
-<p>Age : <b>13</b></p>
-<p>Gender : <b>Male</b></p>
-<p>Contact Number : <b>09192430907</b></p>
-<p>Place of Birth : <b>Trece Martires City, Cavite</b></p>
-<p>Home Address : <b>247 Mercury St. Ph2, Mambog II, Bacoor, Cavite</b></p>
-<a href="https://jaesun024.github.io/Jaesun/README.md"
-   style="background-color:blue; color:white; padding:12px 25px; text-decoration:none; border-radius:5px; float:left;">
-    &larr; Previous
-</a>
+<header>
+  <h1>Student Information</h1>
+  <a href="index.html">Homepage</a>
+</header>
 
-<a href="https://jaesun024.github.io/Jaesun/page2.html"
-   style="background-color:blue; color:white; padding:12px 25px; text-decoration:none; border-radius:5px; float:right;">
-    Next &rarr;
-</a>
+<main>
+  <section id="student-card" aria-label="Student card">
+    <img src="https://i.imgur.com/7yOQqfc.jpg" alt="Photo of Camerron Jae-Sun M. Dela Cruz">
+    <h2>Camerron<br>Jae-Sun M.<br>Dela Cruz</h2>
+    <p class="id-tag"><b>Student ID:</b> DEL3231-24</p>
+  </section>
+
+  <section class="info">
+    <h2>General Information</h2>
+    <dl>
+      <div class="row"><dt>Date of birth</dt><dd>09/24/12</dd></div>
+      <div class="row"><dt>Age</dt><dd>13</dd></div>
+      <div class="row"><dt>Gender</dt><dd>Male</dd></div>
+      <div class="row"><dt>Contact number</dt><dd>09192430907</dd></div>
+      <div class="row"><dt>Place of birth</dt><dd>Trece Martires City, Cavite</dd></div>
+      <div class="row"><dt>Home address</dt><dd>247 Mercury St. Ph2, Mambog II, Bacoor, Cavite</dd></div>
+    </dl>
+  </section>
+</main>
+
+<nav class="navigation" aria-label="Activities">
+  <a class="nav-button" href="https://jaesun024.github.io/Jaesun/page2.html">Act. 1.2</a>
+  <a class="nav-button" href="https://jaesun024.github.io/Jaesun/page3.html">PT Q1</a>
+  <a class="nav-button" href="https://jaesun024.github.io/Jaesun/page4.html">Act. 2.1</a>
+  <a class="nav-button" href="https://jaesun024.github.io/Jaesun/page5.html">Act. 2.2</a>
+  <a class="nav-button" href="https://jaesun024.github.io/Jaesun/page6.html">Act. 2.3</a>
+  <a class="nav-button" href="https://jaesun024.github.io/Jaesun/page7.html">Act. 2.4</a>
+</nav>
+
+<footer>
+  <p>Copyright © 2026 Student Information. All rights reserved.</p>
+</footer>
 
 </body>
+</html>
