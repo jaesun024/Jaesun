@@ -11,6 +11,8 @@
             background-attachment: fixed;
             background-size: cover;
             font-family: Arial;
+            margin: 0;
+            padding: 0;
         }
 
         h1 {
@@ -19,6 +21,7 @@
             background-color: darkblue;
             padding: 20px;
             font-size: 40px;
+            margin: 0;
         }
 
         h2 {
@@ -43,12 +46,39 @@
             border-radius: 10px;
         }
 
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: darkblue;
+            padding: 15px 30px;
+        }
+
+        .nav-buttons a {
+            background-color: darkblue;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 2px solid white;
+        }
+
+        .nav-buttons a:hover {
+            background-color: white;
+            color: darkblue;
+        }
+
+        .nav-left {
+            display: flex;
+            gap: 10px;
+        }
+
         footer {
             background-color: darkblue;
             color: white;
             text-align: center;
             padding: 15px;
-            margin-top: 50px;
+            border-top: 2px solid white;
         }
     </style>
 </head>
@@ -111,20 +141,13 @@
         </p>
     </div>
 
-    <a href="https://jaesun024.github.io/Jaesun/page5.html"
-       style="background-color:darkblue; color:white; padding:12px 25px; text-decoration:none; border-radius:5px; float:left;">
-        &larr; Previous
-    </a>
-<a href="https://jaesun024.github.io/Jaesun/index.html"
-       style="background-color:darkblue; color:white; padding:12px 25px; text-decoration:none; border-radius:5px; float:left;">
-        &larr; Home
-</a>
-    <a href="https://jaesun024.github.io/Jaesun/page7.html"
-       style="background-color:darkblue; color:white; padding:12px 25px; text-decoration:none; border-radius:5px; float:right;">
-        Next &rarr;
-    </a>
-
-    <br><br><br>
+    <div class="nav-buttons">
+        <div class="nav-left">
+            <a href="https://jaesun024.github.io/Jaesun/page5.html">&larr; Previous</a>
+            <a href="https://jaesun024.github.io/Jaesun/index.html">&larr; Home</a>
+        </div>
+        <a href="https://jaesun024.github.io/Jaesun/page7.html">Next &rarr;</a>
+    </div>
 
     <footer>
         Jae-sun Coorperation
