@@ -115,14 +115,46 @@
             border-radius: 15px;
         }
 
-        .footer {
-            margin: 30px 20px;
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 20px 0 20px;
             border: 5px solid #172554;
+            padding: 15px 30px;
+            background-color: #1e40af;
+            border-radius: 50px 50px 10px 10px;
+        }
+
+        .nav-buttons a {
+            background-color: #2563eb;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 10px;
+            border: 2px solid white;
+            font-weight: bold;
+        }
+
+        .nav-buttons a:hover {
+            background-color: white;
+            color: #1e40af;
+        }
+
+        .nav-left {
+            display: flex;
+            gap: 10px;
+        }
+
+        .footer {
+            margin: 0 20px 30px 20px;
+            border: 5px solid #172554;
+            border-top: none;
             padding: 25px;
             background-color: #1e40af;
             color: white;
             text-align: center;
-            border-radius: 50px;
+            border-radius: 0px 0px 50px 50px;
             box-shadow: 0px 6px 0px #172554;
         }
     </style>
@@ -204,25 +236,20 @@
         </p>
     </div>
 
+    <div class="nav-buttons">
+        <div class="nav-left">
+            <a href="https://jaesun024.github.io/Jaesun/page6.html">&larr; Previous</a>
+            <a href="https://jaesun024.github.io/Jaesun/index.html">&larr; Home</a>
+        </div>
+        <a href="page7.html">Next &rarr;</a>
+    </div>
+
     <div class="footer">
         <h2>🏀 Thank You for Visiting!</h2>
         <p>This webpage was created for my CSS Box Model activity.</p>
         <p>Margin • Border • Padding • Content</p>
         <p>© 2026 Kyrie Irving Fan Page</p>
     </div>
-
-<a href="https://jaesun024.github.io/Jaesun/page6.html"
-       style="background-color:darkblue; color:white; padding:12px 25px; text-decoration:none; border-radius:5px; float:left;">
-        &larr; Previous
-    </a>
-<a href="https://jaesun024.github.io/Jaesun/index.html"
-       style="background-color:darkblue; color:white; padding:12px 25px; text-decoration:none; border-radius:5px; float:center;">
-        &larr; Home
-</a>
-    <a href="page7.html"
-       style="background-color:darkblue; color:white; padding:12px 25px; text-decoration:none; border-radius:5px; float:right;">
-        Next &rarr;
-    </a>
 
 </body>
 </html>
